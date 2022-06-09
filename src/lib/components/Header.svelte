@@ -17,10 +17,10 @@
   </nav>
 </header>
 
-<style>
+<style lang='scss'>
   header {
     padding: 1rem;
-    background: lightskyblue;
+    background: black;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
