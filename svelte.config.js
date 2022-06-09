@@ -1,6 +1,5 @@
 //import adapter from '@sveltejs/adapter-auto';
 import adapter from '@sveltejs/adapter-netlify';
-import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,9 +9,7 @@ const config = {
 			$lib: 'src/lib',
 		}
 	},
-	preprocess: [
-		sveltePreprocess(),
-	]
+
 };
 
 export default config;
