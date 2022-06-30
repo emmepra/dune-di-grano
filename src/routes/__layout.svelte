@@ -1,11 +1,13 @@
-<!-- __layout.svelte -->
 <script>
-  import Header from '$lib/components/Header.svelte'
-  import '$lib/styles/style.css'
+  import '$styles/app.scss'
+  import Header from '$components/Header.svelte'
+  import Footer from '$components/Footer.svelte'
 </script>
 
 <Header />
 
-<main>
+<main id="content">
   <slot />
 </main>
+
+<Footer />
