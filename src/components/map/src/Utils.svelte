@@ -1,20 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-        </style>
-	</head>
-	<body>
 
-		<div>%sveltekit.body%</div>
-
-<script src="src/components/map/src/config.js"></script>
 <script>
-var initLoad = true;
-var layerTypes = {
+import config from './config.js';
+import mapboxgl from 'mapbox-gl';
+import scrollama from 'scrollama';
+
+const initLoad = true;
+const layerTypes = {
     'fill': ['fill-opacity'],
     'line': ['line-opacity'],
     'circle': ['circle-opacity', 'circle-stroke-opacity'],
@@ -24,7 +15,7 @@ var layerTypes = {
     'heatmap': ['heatmap-opacity']
 }
 
-var alignments = {
+const alignments = {
     'left': 'lefty',
     'center': 'centered',
     'right': 'righty',
@@ -32,16 +23,16 @@ var alignments = {
 }
 
 function getLayerPaintType(layer) {
-    var layerType = map.getLayer(layer).type;
+    const layerType = map.getLayer(layer).type;
     return layerTypes[layerType];
 }
 
 function setLayerOpacity(layer) {
-    var paintProps = getLayerPaintType(layer.layer);
+    const paintProps = getLayerPaintType(layer.layer);
     paintProps.forEach(function(prop) {
-        var options = {};
+        const options = {};
         if (layer.duration) {
-            var transitionProp = prop + "-transition";
+            const transitionProp = prop + "-transition";
             options = { "duration": layer.duration };
             map.setPaintProperty(layer.layer, transitionProp, options);
         }
@@ -49,26 +40,26 @@ function setLayerOpacity(layer) {
     });
 }
 
-var story = document.getElementById('story');
-var features = document.createElement('div');
+const story = document.getElementById('story');
+const features = document.createElement('div');
 features.setAttribute('id', 'features');
 
-var header = document.createElement('div');
+const header = document.createElement('div');
 
 if (config.title) {
-    var titleText = document.createElement('h1');
+    const titleText = document.createElement('h1');
     titleText.innerText = config.title;
     header.appendChild(titleText);
 }
 
 if (config.subtitle) {
-    var subtitleText = document.createElement('h2');
+    const subtitleText = document.createElement('h2');
     subtitleText.innerText = config.subtitle;
     header.appendChild(subtitleText);
 }
 
 if (config.byline) {
-    var bylineText = document.createElement('p');
+    const bylineText = document.createElement('p');
     bylineText.innerText = config.byline;
     header.appendChild(bylineText);
 }
@@ -80,23 +71,23 @@ if (header.innerText.length > 0) {
 }
 
 config.chapters.forEach((record, idx) => {
-    var container = document.createElement('div');
-    var chapter = document.createElement('div');
+    const container = document.createElement('div');
+    const chapter = document.createElement('div');
 
     if (record.title) {
-        var title = document.createElement('h3');
+        const title = document.createElement('h3');
         title.innerText = record.title;
         chapter.appendChild(title);
     }
 
     if (record.image) {
-        var image = new Image();
+        const image = new Image();
         image.src = record.image;
         chapter.appendChild(image);
     }
 
     if (record.description) {
-        var story = document.createElement('p');
+        const story = document.createElement('p');
         story.innerHTML = record.description;
         chapter.appendChild(story);
     }
@@ -118,10 +109,10 @@ config.chapters.forEach((record, idx) => {
 
 story.appendChild(features);
 
-var footer = document.createElement('div');
+const footer = document.createElement('div');
 
 if (config.footer) {
-    var footerText = document.createElement('p');
+    const footerText = document.createElement('p');
     footerText.innerHTML = config.footer;
     footer.appendChild(footerText);
 }
@@ -142,7 +133,7 @@ const transformRequest = (url) => {
     }
 }
 
-var map = new mapboxgl.Map({
+const map = new mapboxgl.Map({
     container: 'map',
     style: config.style,
     center: config.chapters[0].location.center,
@@ -156,7 +147,7 @@ var map = new mapboxgl.Map({
 
 // Create a inset map if enabled in config.js
 if (config.inset) {
- var insetMap = new mapboxgl.Map({
+ const insetMap = new mapboxgl.Map({
     container: 'mapInset', // container id
     style: 'mapbox://styles/mapbox/dark-v10', //hosted style id
     center: config.chapters[0].location.center,
@@ -172,12 +163,12 @@ if (config.inset) {
 }
 
 if (config.showMarkers) {
-    var marker = new mapboxgl.Marker({ color: config.markerColor });
+    const marker = new mapboxgl.Marker({ color: config.markerColor });
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
 }
 
 // instantiate the scrollama
-var scroller = scrollama();
+const scroller = scrollama();
 
 
 map.on("load", function() {
@@ -215,7 +206,7 @@ map.on("load", function() {
         progress: true
     })
     .onStepEnter(async response => {
-        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        const chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.add('active');
         map[chapter.mapAnimation || 'flyTo'](chapter.location);
         // Incase you do not want to have a dynamic inset map,
@@ -250,7 +241,7 @@ map.on("load", function() {
         }
     })
     .onStepExit(response => {
-        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        const chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
@@ -339,12 +330,7 @@ function updateInsetLayer(bounds) {
     insetMap.getSource('boundsSource').setData(bounds);
 }
 
-
-
 // setup resize event
 window.addEventListener('resize', scroller.resize);
 
 </script>
-
-</body>
-</html>

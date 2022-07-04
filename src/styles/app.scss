@@ -1,36 +1,34 @@
 @import "$bulma/bulma.sass";
-//@import "../../node_modules/bulma/bulma.sass";
 
+@import "variables.css";
+@import "normalize.css";
+@import "font.css";
+@import "reset.css";
 
-body {
-    margin: 0;
-    background: #eee;
-    color: #333;
-    font-family: sans-serif;
-}
+/* colors defined in variables.css */
+:root {
+    /* font */
+    --sans: "National 2 Web", Helvetica, Arial, sans-serif;
+    --serif: "Tiempos Text Web", Georgia, Times, serif;
+    --mono: Menlo, Consolas, Monaco, "Courier New", monospace;
 
-main {
-    padding: 1rem;
-    margin: 2rem auto;
-    max-width: 40rem;
-}
+    /* z-index */
+    --z-bottom: -100;
+    --z-middle: 0;
+    --z-top: 100;
+    --z-overlay: 1000;
 
-header {
-    padding: 1rem;
-    background: lightskyblue;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-ul {
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-    gap: 1rem;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
+    /* presets */
+    --border-radius: 4px;
+    --font-body: var(--sans);
+    --font-form: var(--sans);
+    --color-bg: var(--color-background);
+    --color-fg: var(--color-off-black);
+    --color-placeholder: var(--color-gray-dark);
+    --color-link: var(--color-fg);
+    --color-focus: var(--color-red);
+    --color-form-bg: var(--color-gray-dark);
+    --color-form-fg: var(--color-off-black);
+    --color-border: var(--color-gray-light);
+    --color-selection: var(--color-highlight);
 }

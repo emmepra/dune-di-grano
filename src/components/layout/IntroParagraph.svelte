@@ -3,7 +3,7 @@
 
 <p><slot /></p>
 
-<style lang="scss">
+<style lang="css">
   p {
     max-width: 42em;
     margin-bottom: 1rem;
