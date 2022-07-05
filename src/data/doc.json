@@ -1,1 +1,35 @@
-{"details":{"title":"Dune di Grano","subtitle":"sottotitolo da visualizzare una volta che avremo capito come funziona il tutto.","author":["Vivianna Zitani","Matteo Prandi"]},"intro":["testo di prova per vedere se la nostra magnifica storia verrà visualizzata automaticamente oppure no.","se lascio uno spazio tra le varie parti dovrebbe salvare tutto come un nuovo paragrafo mantenendo la classica struttura per type text e value questo testo.","proviamo a vedere che succede!"]}
+{
+    "details": {
+        "title": "Dune di Grano",
+        "subtitle": "sottotitolo da visualizzare una volta che avremo capito come funziona il tutto.",
+        "author": [
+            "Vivianna Zitani",
+            "Matteo Prandi"
+        ]
+    },
+
+    "intro": [
+        {
+            "title": "Titolo uno",
+            "pars": [
+                "testo di prova per vedere se la nostra magnifica storia verrà visualizzata automaticamente oppure no.",
+                "se lascio uno spazio tra le varie parti dovrebbe salvare tutto come un nuovo paragrafo mantenendo la classica struttura per type text e value questo testo.",
+                "proviamo a vedere che succede!"
+            ]
+        },
+        {
+            "title": "Titolo due",
+            "pars": [
+                "testo di prova per vedere se la nostra magnifica storia verrà visualizzata automaticamente oppure no.",
+                "se lascio uno spazio tra le varie parti dovrebbe salvare tutto come un nuovo paragrafo mantenendo la classica struttura per type text e value questo testo.",
+                "proviamo a vedere che succede!"
+            ]
+        }
+    ],
+
+    "quote": {
+        "author": "Pippo Franco, Amministratore Delegato Coca-Cola Inc.",
+        "text": "Il famosissimo CUOT"
+    }
+}
+

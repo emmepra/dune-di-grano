@@ -1,27 +1,24 @@
 <script context="module">
     import doc from "$data/doc.json"
-    import Hero from "$components/intro/Hero.svelte"
-    import Section from "$components/layout/Section.svelte"
+
+    import Section from "$components/bulma/Section.svelte"
+    
     import IntroParagraph from "$components/layout/IntroParagraph.svelte"
     import Paragraph from "$components/layout/Paragraph.svelte"
     import Heading from "$components/layout/Heading.svelte"
+    import Map from "$components/layout/Map.svelte"
+    import Quote from "$components/layout/Quote.svelte"
 
-    import Image from "$components/layout/Image.svelte"
+    // import CoverImg from "$components/layout/CoverImg.svelte"
 
-    import Map from "$components/map/Map.svelte"
 </script>
-
-<Image localUrl={'grano.jpg'} />
 
 <Map />
 
-<Section id="intro">
-  <div class="intro">
-    {#each doc.intro as p, i}
-      <IntroParagraph hasCap={i === 0}>{@html p}</IntroParagraph>
-    {/each}
-  </div>
-</Section>
+<Quote content={doc.quote} />
+<!-- <CoverImg localUrl={'wheat.png'} /> -->
+
+<IntroParagraph content={doc.intro}/>
 
 <Section id="iconography">
   <Heading>{@html doc.iconography_title}</Heading>
