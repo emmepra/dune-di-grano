@@ -5,7 +5,7 @@
     let {author, text} = content
 </script>
 
-<Section bulma='' id='quote'>
+<Section bulma='p-3' id='quote'>
 <section class="container">
     <div class="columns">
         <div class="column has-text-centered">
@@ -41,7 +41,7 @@
     h1 {
         font-family: var(--serif);
         font-weight: 400;
-        color: gray;
+        color: var(--color-gray-medium);
     }
 
     h1 span {
@@ -52,6 +52,14 @@
 
         padding-right: 0.2rem;
         padding-left: 0.1rem;
+    }
+
+    p.description {
+        margin-bottom: 1rem;
+        font-family: var(--sans);
+        font-size: 1rem;
+        line-height: 1.65;  
+        color: var(--color-gray-medium)
     }
 
 </style>

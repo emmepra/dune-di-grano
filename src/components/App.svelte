@@ -3,12 +3,11 @@
 
     import Section from "$components/bulma/Section.svelte"
     
-    import IntroParagraph from "$components/layout/IntroParagraph.svelte"
     import Paragraph from "$components/layout/Paragraph.svelte"
-    import Heading from "$components/layout/Heading.svelte"
     import Map from "$components/layout/Map.svelte"
     import Quote from "$components/layout/Quote.svelte"
 
+    import Plot from "$components/plot/Plot.svelte"
     // import CoverImg from "$components/layout/CoverImg.svelte"
 
 </script>
@@ -18,12 +17,28 @@
 <Quote content={doc.quote} />
 <!-- <CoverImg localUrl={'wheat.png'} /> -->
 
-<IntroParagraph content={doc.intro}/>
+<Section id='introduction' bulma={'p-3'}>
+  <Paragraph content={doc.intro}/>
+  <Paragraph content={doc.intro2}/>
 
-<Section id="iconography">
+  <section class="container">
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <Plot />
+      </div>
+    </div>
+  </section>
+  
+</Section>
+
+
+
+
+
+<!-- <Section id="iconography">
   <Heading>{@html doc.iconography_title}</Heading>
 
   <Paragraph hasCap={true}>{@html doc.iconography_intro}</Paragraph>
   <Paragraph>{@html doc.iconography_imaginarygods}</Paragraph>
-</Section>
+</Section> -->
 
