@@ -23,7 +23,7 @@
   </div>
 </section> -->
 
-<section class="container mb-6 grid">
+<section class="container p-3 grid">
   <div class="columns">
     <div class="column content grid-xl">  
       {#if title.length !== 0}
@@ -44,7 +44,7 @@
 <style lang="css">
 
   h4 {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: var(--color-gray-dark);
     font-family: var(--sans);
     text-align: left;

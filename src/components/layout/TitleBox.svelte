@@ -2,10 +2,6 @@
   // import Container from "$components/layout/Container.svelte";
 </script>
 
-<div class="card">
-  ciao
-</div>
-
 <div class='card'>
 
   <h1 class="title">Dune di Grano</h1>

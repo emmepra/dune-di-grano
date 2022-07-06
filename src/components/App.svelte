@@ -8,14 +8,15 @@
     import Quote from "$components/layout/Quote.svelte"
 
     import Plot from "$components/plot/Plot.svelte"
-    // import CoverImg from "$components/layout/CoverImg.svelte"
+    import CoverImg from "$components/layout/CoverImg.svelte"
 
 </script>
 
-<Map />
+
+<CoverImg localUrl={'wheat.png'} />
 
 <Quote content={doc.quote} />
-<!-- <CoverImg localUrl={'wheat.png'} /> -->
+<Map />
 
 <Section id='introduction' bulma={'p-3'}>
   <Paragraph content={doc.intro}/>
