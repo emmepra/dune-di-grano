@@ -2,7 +2,7 @@
     import Section from "$components/bulma/Section.svelte"
     export let content = undefined
 
-    let {author, text} = content
+    let {author, text} = content;
 </script>
 
 <Section bulma='p-3' id='quote'>
