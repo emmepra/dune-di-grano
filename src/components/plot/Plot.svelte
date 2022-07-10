@@ -8,7 +8,8 @@
     
     onMount(async () => {
         new Runtime().module(plt, name => {
-            if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-d8e2dd59"));
+            if (name === "imp_exp") return new Inspector(document.querySelector("#observablehq-chart-d8e2dd59"));
+            if (name === "wheat_price") return new Inspector(document.querySelector("#observablehq-wheat_plot-f667bd66"));
         }); 
     });
     

@@ -9,8 +9,10 @@
 <section class="container">
     <div class="columns">
         <div class="column has-text-centered">
-            <h1 class="title is-1 is-italic cap"><span>«</span> {text} <span>»</span></h1>
-            <p class="description">- {author}</p>
+            <h1 class="title is-1 is-italic cap"><span>«</span>{text}<span>»</span></h1>
+            {#if author.length !== 0}
+                <p class="description">- {author}</p>
+            {/if}
         </div>
     </div>
 </section>
