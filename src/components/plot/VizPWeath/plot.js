@@ -294,13 +294,13 @@ html`
   .group .time-series:first-child { padding-top: 0; }
   .group .time-series { padding-top: 1em; }
   .time-series { display: block; overflow: visible; }
-  .time-series .title { font-weight: bold; font-size: 1.5rem; }
+  .time-series .title { font-weight: bold; font-size: 1.5rem; fill: #5b5b5b}
   .time-series .title tspan { font-weight: normal; font-size: 1.1rem; fill: ${gray}; }
   .time-series path.fill { fill: url(#MyGradient) }
   .time-series path.stroke { fill: transparent; stroke: ; stroke-width: 0.65;}
   .time-series .x-axis { font-size: 1rem; transform: translate(0, 5px); }
   .time-series .y-axis { font-size: 1rem; transform: translate(${xscale(end) + 5}px, 0); fill: ${gray}; }
-  .time-series .peaks { font-size: 1rem; font-weight: bold}
+  .time-series .peaks { font-size: 1rem; font-weight: bold; fill: #5b5b5b}
   .time-series .hover text { font-size: 1rem; fill: #30425E; transform: translate(0, 5px); }
   .time-series .hover line { stroke: #30425E; stroke-width: 1; }
   .time-series .hover { opacity: 0; transition: opacity 0.15s ease-out; }
