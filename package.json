@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@emmepra/wheat-peaks": "https://api.observablehq.com/@emmepra/wheat-peaks@8109.tgz?v=3",
 		"@observablehq/runtime": "^4.22.7",
 		"archieml": "^0.5.0",
 		"d3": "^7.6.1",

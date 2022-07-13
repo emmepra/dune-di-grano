@@ -26,7 +26,7 @@
   </div>
 </section> -->
 
-<section class="container p-3 grid">
+<section class="container p-3 mb-5 grid">
   <div class="columns">
     <div class="column content grid-xl" class:divStart={div}>  
       {#if title.length !== 0}

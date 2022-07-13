@@ -7,11 +7,10 @@
   import Map from "$components/layout/Map.svelte"
   import Quote from "$components/layout/Quote.svelte"
 
-  import Plot from "$components/plot/Plot.svelte"
   import CoverImg from "$components/layout/CoverImg.svelte"
 
+  import VizPWeath from "$components/plot/VizPWeath/Viz.svelte"
   import VizExport from "$components/plot/VizExport.svelte"
-  // import VizWheat from "$components/plot/VizWheat.svelte"
   // import VizInfl from "$components/plot/VizInfl.svelte"
 </script>
 
@@ -41,7 +40,7 @@
   <Paragraph content={doc.intro} div={true}/>
   <Paragraph content={doc.intro2}/>
 
-  <!-- <VizWheat /> -->
+  <VizPWeath />
 
 </Section>
 
