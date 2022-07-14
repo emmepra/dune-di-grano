@@ -4,7 +4,7 @@
   
   let value;
   const steps = [
-		 "This is a dynamic, responsive scatterplot that uses Russell Goldenberg's <a href='	https://twitter.com/codenberg/status/1432774653139984387' target='_blank'><code>Scrolly</code></a> to update its points' values on scroll.",
+		 "This is a dynamic, responsive scatterplot that uses Russell Goldenberg's <a href='' target='_blank'><code>Scrolly</code></a> to update its points' values on scroll.",
     "The scatterplot uses tweened values to automatically update your points with smooth transitions. It also binds to the width of the container <code>div</code>, so its responsive by default.",
     "Try resizing me to see the 'side-by-side' version, compared to the 'text-on-top' version that appears on small screens.</><>Want it to always appear 'text-on-top'? Just comment out the media query at the bottom of our styles (as in, leave the styles but comment out the surrounding <code>media</code> query).",
   ];
