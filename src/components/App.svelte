@@ -10,7 +10,7 @@
   import CoverImg from "$components/layout/CoverImg.svelte"
 
   import VizPWeath from "$components/plot/VizPWeath/Viz.svelte"
-  import VizExport from "$components/plot/VizExport.svelte"
+  import VizImport from "$components/plot/VizImport/Scrolly.svelte"
   // import VizInfl from "$components/plot/VizInfl.svelte"
 </script>
 
@@ -32,7 +32,7 @@
     </div>
   </section> -->
   
-  <VizExport />
+  <VizImport />
 
 </Section>
 

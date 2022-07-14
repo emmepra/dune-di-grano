@@ -13,10 +13,8 @@
     onMount(async () => {
         //new Runtime().module(define, Inspector.into(".ciao"));
         (new Runtime).module(define, name => {
-            if (name === "wheat_plot") return Inspector.into(".VizPWeath")();
-            if (name === "timeSeriesStyle") return Inspector.into('.VizPWeath')();
-            if (name === "fontStyle") return Inspector.into('.VizPWeath')();
-            if (name === "t") return true;
+            if (name === "Chart1") return Inspector.into(".VizImport")();
+            if (name === "") return Inspector.into(".VizImport")();
         });
     });
 
@@ -24,17 +22,12 @@
 
 <span><br><br></span>
 
-        <div class="svg-container">
-            <div class="VizPWeath"></div>
-        </div>
+<div class="columns is-centered">
+    <div class="column">
+        <div class="VizImport"></div>
 
-
-
-
+    </div>
+</div>
 
 <style>
-    .svg-container {
-        display:flex;
-      box-sizing: border-box;
-    }
 </style>
