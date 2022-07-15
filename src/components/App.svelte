@@ -22,8 +22,8 @@
 
 <Section id='parte1' bulma={'p-3'}>
   <Paragraph capDrop={true} content={doc.parte2_1} />
-  <VizImport />
   <Paragraph content={doc.parte2_2}/>
+  <VizImport />
 
   <!-- <section class="container p-5">
     <div class="columns is-centered">
