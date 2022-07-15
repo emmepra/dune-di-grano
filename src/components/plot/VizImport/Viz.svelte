@@ -25,9 +25,9 @@
 <div class="columns is-centered">
     <div class="column">
         <div class="VizImport"></div>
-
     </div>
 </div>
+
 
 <style>
 </style>

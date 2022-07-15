@@ -21,8 +21,9 @@
 <Quote content={doc.quote} />
 
 <Section id='parte1' bulma={'p-3'}>
-  <Paragraph capDrop={true} content={doc.intro} />
-  <Paragraph content={doc.intro2}/>
+  <Paragraph capDrop={true} content={doc.parte2_1} />
+  <VizImport />
+  <Paragraph content={doc.parte2_2}/>
 
   <!-- <section class="container p-5">
     <div class="columns is-centered">
@@ -32,15 +33,17 @@
     </div>
   </section> -->
   
-  <VizImport />
 
 </Section>
 
 <Section id='parte2' bulma={'p-3'}>
-  <Paragraph content={doc.intro} div={true}/>
-  <Paragraph content={doc.intro2}/>
+  <Paragraph content={doc.parte3_1} div={true}/>
+  <Paragraph content={doc.parte3_2}/>
 
   <VizPWeath />
+
+  <Paragraph content={doc.parte3_3}/>
+
 
 </Section>
 

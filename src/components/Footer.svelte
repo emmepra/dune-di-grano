@@ -6,20 +6,20 @@
   let stories = [];
 
   const v = Date.now();
-  const url = `https://pudding.cool/assets/data/stories.json?v=${v}`;
+  const url = ``;
 
   const links = [
-    { name: "about", url: "https://pudding.cool/about" },
-    { name: "facebook", url: "https://facebook.com/pudding.viz/" },
-    { name: "twitter", url: "https://twitter.com/puddingviz/" },
+    { name: "about", url: "" },
+    { name: "facebook", url: "" },
+    { name: "twitter", url: "" },
     {
       name: "instagram",
-      url: "https://www.instagram.com/the.pudding"
+      url: ""
     },
-    { name: "patreon", url: "https://patreon.com/thepudding/" },
-    { name: "privacy", url: "https://pudding.cool/privacy/" },
-    { name: "newsletter", url: "http://eepurl.com/czym6f" },
-    { name: "rss", url: "https://pudding.cool/feed/index.xml" }
+    { name: "patreon", url: "" },
+    { name: "privacy", url: "" },
+    { name: "newsletter", url: "" },
+    { name: "rss", url: "" }
   ];
 
   onMount(async () => {
@@ -37,10 +37,10 @@
     {#each stories as { hed, url, image }}
       <div class="story">
         <a href="https://pudding.cool/{url}">
-          <img
+          <!-- <img
             src="https://pudding.cool/common/assets/thumbnails/640/{image}.jpg"
             alt="thumbnail"
-          />
+          /> -->
           <span>{hed}</span>
         </a>
       </div>
@@ -52,8 +52,8 @@
       {@html wordmark}
     </div>
     <p>
-      <a href="https://pudding.cool">The Pudding</a>
-      is a digital publication that explains ideas debated in culture with visual essays.
+      <a href="https://pudding.cool">TurningSocks</a>
+      è un progetto digitale con l'obiettivo di raccontare l'attualità visivamente attraverso i dati.
     </p>
   </section>
 

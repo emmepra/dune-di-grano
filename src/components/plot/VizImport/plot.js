@@ -14,27 +14,27 @@ ${styles}
 
   <div style = "display: flex; height: 100%; border: 2px solid white">
 
-    <div style = "flex: 0.5; background-color: #E4E5E6; padding: 10px; color: #5b5b5b; position: relative"> 
+    <div style = "flex: 0.65; background-color: #E4E5E6; padding: 30px 10px 10px 10px; color: #5b5b5b; position: relative"> 
 
-      <text style = "font-size: 1.5rem; font-family: 'National 2 Web'; line-height:1.2"> <span style = "font-weight: bold"> Import Grano </span> ($mln) in Medio Oriente</text>
+      <text style = "font-size: 1.5rem; font-family: 'National 2 Web'; line-height:1.2"> <span style = "font-weight: bold"> Import Grano ($ mln) in Medio Oriente</span></text>
       <br>
 
       <hr style = "height: 1px; padding:0; background-color: lightgrey; margin: 20px 20px 20px 5px">
         
-      <div id = "descWrapper" style = "font-size: 12px; font-family: 'National 2 Web'; opacity:0">
+      <div id = "descWrapper" style = "font-size: 1.1rem; font-family: 'National 2 Web'; opacity:0">
           <span id = "EEZtonnesPct" style = "text-decoration: underline">
              <span id = "EEZtonnes">1200k tonnes </span> 
              <span id = "EUpct">(49%)</span>
           </span>
-          of EU catches come from <span class = "Nationality">UK</span> waters <br><br>
-          <span id = "descText2">...of which <span id = "catchPct" style = "text-decoration:underline">34%</span> is caught by <span class = "Nationality">UK</span> fleets. <br><br>...and the rest is split between <span id = "fleetCount" style = "font-weight: bold">5</span> other EU states</span>       
+          dell'Import di Grano in Medio Oriente proviene da coltivazioni <span class = "Nationality">UK</span>.<br><br>
+          <span id = "descText2">Di questi, il <span id = "catchPct" style = "text-decoration:underline">34%</span> viene importato in <span class = "Nationality">UK</span> fleets. <br><br>. Il resto è ripartito tra altri <span id = "fleetCount" style = "font-weight: bold">5</span> paesi del MO.</span>       
       </div>
 
    </div>
 
    <div style = "flex: 0; background-color: #EBECEE; margin-top: 30px" id = "wrapper">
      
-      <div style = "position: absolute; left:60%; top: 7%"  id="map" class="mapDiv"> ${showMap(mapColor)} </div>
+      <div style = "position: absolute; left:70%; top: 10%"  id="map" class="mapDiv"> ${showMap(mapColor)} </div>
 
       <div style = "position: absolute; left:80%; top: 35%; display: grid; grid-template-rows: auto;font-family: caveat; font-size:17px; color: #c2c2c2; line-height:1" >
 
@@ -175,15 +175,16 @@ ${dimensions.margin.top}px)`)
       .join("text").attr("id", function(d,i){return expCodes[i]})
         .attr("x", (d,i) => x(i) + dimensions.pathWidth/2)
         .attr("y", d => d.EEZ == "Ukraine" ? -reverseYtonn(d.stock) - 24 : -reverseYtonn(d.stock) - 8)
-        .text(d => Math.round(d.stock/1000))
+        .text(d => Math.round(d.stock/1000000))
         .style("text-anchor", "middle")
-        .style("fill", "#C2C2C2")
+       .style("fill", "#C2C2C2")
+      //  .style("font-weight","bold")
         .style("font-size", 13.5)
         .style("font-family", "National 2 Web")
           .append("tspan")
           .attr("dy","1.2em")
           .attr("x",0)
-          .text(d =>  `${d.EEZ == "Ukraine" ? "(k tonnes)" : ""}`)
+          .text(d =>  `${d.EEZ == "Ukraine" ? "($ mln)" : ""}`)
           .style("font-size", 12)
     
     //Draw catch pct text
@@ -277,7 +278,7 @@ ${dimensions.margin.top}px)`)
      d3.select("#catch-text").selectAll("text")
      .data(fleetLandingsPct(simulatedLandings), (d,i) => i)
      .attr("y",  d => y(d[0]) + 18)
-     .text(d => Math.round(d[1]/1000));
+     .text(d => Math.round(d[1]/1000000));
       
     //Update the progress of the ultimate mark, to know when to trigger the next EEZ
     markProgress = d3.min(sims,d => d.currentPos.y);
@@ -351,7 +352,7 @@ ${dimensions.margin.top}px)`)
 function _descText(d3,f,EEZstockPct,EEZtonnage2,expNationalities){return(
 function(EEZ){
      d3.select("#EUpct").text(`(${f(EEZstockPct[EEZ])})`);
-     d3.select("#EEZtonnes").text(`${Math.round(EEZtonnage2[EEZ].stock/1000)}k tonnes`)
+     d3.select("#EEZtonnes").text(`${Math.round(EEZtonnage2[EEZ].stock/1000000)}$ mln`)
        // .style("color", colorScale(EEZ));
      d3.selectAll(".Nationality").text(expNationalities[EEZ]);
 }
@@ -450,7 +451,7 @@ function(){
        d3.select("#catch-text").selectAll("text")
          .data(simulatedLandingsTonnage.map(d => d[selectedEEZ]),(d,i) => i)
          .attr("y",  d => yTonn(d) + 15)
-         .text(d => d > 0 ? Math.round(d/1000) : null)
+         .text(d => d > 0 ? Math.round(d/1000000) : null)
          .style("fill", colorScale(EEZindex))
          .style("font-size", 12.5)
          .style("font-weight", 500);
@@ -660,7 +661,7 @@ function _impNationalities(){return(
 )}
 
 function _expNationalities(){return(
-["Ukranian", "Russian", "Other"]
+["Ucraine", "Russe", "di altri paesi"]
 )}
 
 function _countryIDs(d3,countryNames){return(
