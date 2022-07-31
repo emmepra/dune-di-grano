@@ -21,14 +21,24 @@ ${styles}
 
       <hr style = "height: 1px; padding:0; background-color: lightgrey; margin: 20px 20px 20px 5px">
         
-      <div id = "descWrapper" style = "font-size: 1.1rem; font-family: 'National 2 Web'; opacity:0">
+      <div id = "waitFor" style = "font-size: 0.9rem; font-family: 'National 2 Web'; opacity:1; align-self: flex-end">
+        <i>Posiziona il cursore su una barra di <b>Import</b> per vedere il dettaglio!</i>
+      </div>
+
+      <hr style = "height: 1px; padding:0; background-color: lightgrey; margin: 20px 20px 20px 5px">
+
+      <br></br>
+
+      <div id = "descWrapper" style = "font-size: 1.1rem; font-family: 'National 2 Web'; opacity:1">
           <span id = "EEZtonnesPct" style = "text-decoration: underline">
              <span id = "EEZtonnes">1200k tonnes </span> 
              <span id = "EUpct">(49%)</span>
           </span>
           dell'Import di Grano in Medio Oriente proviene da coltivazioni <span class = "Nationality">UK</span>.<br><br>
-          <span id = "descText2">Di questi, il <span id = "catchPct" style = "text-decoration:underline">34%</span> viene importato in <span class = "Nationality">UK</span> fleets. <br><br>. Il resto è ripartito tra altri <span id = "fleetCount" style = "font-weight: bold">5</span> paesi del MO.</span>       
+          <span id = "descText2">Di questi, il <span id = "catchPct" style = "text-decoration:underline">34%</span> viene importato in <span class = "egy_nation">UK</span> fleets.
       </div>
+
+
 
    </div>
 
@@ -358,16 +368,20 @@ function(EEZ){
 }
 )}
 
-function _descText2(d3,f,simulatedLandingsTonnage,expNames,EEZtonnage2){return(
+function _descText2(d3,f,simulatedLandingsTonnage,expNames,fleetTonnage2){return(
 function(EEZ) {
-  d3.select("#catchPct").text(f(simulatedLandingsTonnage[EEZ][expNames[EEZ]]/EEZtonnage2[EEZ].stock));
+  d3.select('#catchPct').text(
+		f(simulatedLandingsTonnage[0][expNames[EEZ]] / fleetTonnage2[EEZ].stock)
+	);
   d3.select("#fleetCount").text(
         simulatedLandingsTonnage.filter(d => d.fleet != expNames[EEZ])
        .map(d => d[expNames[EEZ]])
        .filter(v => v > 0)
        .length
      )
-  d3.select("#descText2").transition().delay(1000).duration(1500).style("opacity",1);
+  d3.select("#descText2").transition().delay(1000).duration(1500).style("opacity", 1);
+
+  d3.selectAll('.egy_nation').text('Egizie');
 }
 )}
 
@@ -649,7 +663,7 @@ function _countryCodes(){return(
 )}
 
 function _expCodes(){return(
-["URK", "RUS", "OTH"]
+["UKR", "RUS", "OTH"]
 )}
 
 function _impCodes(){return(

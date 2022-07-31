@@ -4,7 +4,7 @@
   import loadImage from "$utils/loadImage";
   import Hero from "$components/bulma/Hero.svelte";
 //   const dev = process.env.NODE_ENV === "development";
-  import TitleBox from "$components/layout/TitleBox.svelte"
+  // import TitleBox from "$components/layout/TitleBox.svelte"
 
 </script>
 
@@ -15,9 +15,9 @@
 {:then img}
 
 <Hero bulma="is-fullheight cov-image" style="background-image: url('static/assets/imgs/{localUrl}')">
-  <div class="hero-body">
+  <!-- <div class="hero-body">
       <TitleBox />
-  </div>
+  </div> -->
 </Hero>
 
 {:catch error}

@@ -30,7 +30,8 @@ const config = {
 			},
 			server: {
 				fs: {
-					allow: ['static/assets/imgs']
+					allow: ['static/assets/imgs',
+							'static/assets/audio']
 				}
 			},
 			plugins: [svg()]

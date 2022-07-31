@@ -111,7 +111,7 @@ function(){
       .attr("opacity",0.4);
 
   d3.select("#focal-EEZ-text")
-    .text("Hover over an EEZ bar")
+    .text("Posizionati su un Paese")
     .attr("opacity",1);
   
   d3.select(".map").selectAll(".EEZs")
@@ -130,7 +130,7 @@ function(){
 
   d3.select("#focal-EEZ-text")
     .attr("opacity",0)
-    .text("Hover over an EEZ bar")
+    .text("Posizionati su un Paese")
     .transition().duration(2000)
       .attr("opacity",1);
    

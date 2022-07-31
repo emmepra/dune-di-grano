@@ -75,6 +75,10 @@ p {
     line-height: 1.65;
 }
 
+b {
+  color: var(--color-highlight);
+}
+
 @media only screen and (min-width: 30em) {
     p {
         font-size: 1.1rem;
@@ -96,14 +100,15 @@ p {
 }
   p.cap::first-letter {
     color: var(--color-highlight);
-    padding: 0 .3rem;
+    padding: 0 0.3rem;
     margin: 0 .3rem 0 0;
-    font-size: 4rem;
+    font-size: 3.625rem;
     float: left;
     line-height: 1;
   }
   p:last-of-type {
     margin-bottom: 0;
   }
+  
 
 </style>
