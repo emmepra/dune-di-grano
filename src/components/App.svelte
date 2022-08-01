@@ -16,12 +16,9 @@
   import Audio from "$components/helpers/Audio.svelte"
 </script>
 
-<!-- <CoverImg localUrl={'wheat.png'} /> -->
-
 <Map />
 
 <Quote content={doc.quote} />
-
 
 <Section id='parte1' bulma={'p-3'}>
 
@@ -43,7 +40,9 @@
 
 <Section id='parte2' bulma={'p-3'}>
   <Paragraph content={doc.parte3_1} div={true}/>
-  <!-- <CoverImg localUrl={'grano.jpg'}/> -->
+  
+  <CoverImg localUrl={'grano.jpg'}/>
+  
   <Paragraph content={doc.parte3_2}/>
 
   <VizPWeath />
