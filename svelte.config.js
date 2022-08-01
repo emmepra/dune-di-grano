@@ -8,12 +8,15 @@ import sveltePreprocess from 'svelte-preprocess';
 import svg from "vite-plugin-svgstring";
 // import { PassThrough } from "stream";
 
+let base = "";
+
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
 		adapter: adapterStatic(),
+		target: "#svelte",
 		files: {
 			assets: "static"
 		},
@@ -29,13 +32,16 @@ const config = {
 					$assets: path.resolve('static/assets')
 				}
 			},
-			server: {
-				fs: {
-					allow: ['static/assets/imgs',
-							'static/assets/audio']
-				}
-			},
+			// server: {
+			// 	fs: {
+			// 		allow: ['static/assets/imgs',
+			// 				'static/assets/audio']
+			// 	}
+			// },
 			plugins: [svg()]
+		},
+		paths: {
+			base
 		}
 	}
 };
