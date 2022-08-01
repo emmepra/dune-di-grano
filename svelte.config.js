@@ -1,7 +1,8 @@
 //import adapter from '@sveltejs/adapter-auto';
 import path from "path";
 
-import adapter from '@sveltejs/adapter-netlify';
+//import adapter from '@sveltejs/adapter-netlify';
+import adapterStatic from '@sveltejs/adapter-static';
 import sveltePreprocess from 'svelte-preprocess';
 
 import svg from "vite-plugin-svgstring";
@@ -12,7 +13,7 @@ import svg from "vite-plugin-svgstring";
 const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
-		adapter: adapter(),
+		adapter: adapterStatic(),
 		files: {
 			assets: "static"
 		},
