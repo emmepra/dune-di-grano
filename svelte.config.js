@@ -16,6 +16,9 @@ const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
 		adapter: adapterStatic(),
+		prerender: {
+      		default: true
+    	},
 		files: {
 			assets: "static"
 		},
