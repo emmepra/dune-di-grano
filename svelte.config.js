@@ -16,7 +16,6 @@ const config = {
 	preprocess: sveltePreprocess(),
 	kit: {
 		adapter: adapterStatic(),
-		target: "#svelte",
 		files: {
 			assets: "static"
 		},
