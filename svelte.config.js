@@ -20,18 +20,19 @@ const config = {
       		default: true
     	},
 		files: {
-			assets: "static"
+			assets: 'static',
+			lib: 'src/lib'
 		},
 		vite: {
 			resolve: {
 				alias: {
-					$lib: path.resolve('src/lib'),
-					$utils: path.resolve('src/utils'),
-					$components: path.resolve('src/components'),
-					$styles: path.resolve('src/styles'),
-					$bulma: path.resolve('node_modules/bulma'),
-					$data: path.resolve('src/data'),
-					$assets: path.resolve('static/assets')
+					// $lib: path.resolve('./src/lib'),
+					$utils: path.resolve('./src/utils'),
+					$components: path.resolve('./src/components'),
+					$styles: path.resolve('./src/styles'),
+					$bulma: path.resolve('./node_modules/bulma'),
+					$data: path.resolve('./src/data'),
+					//$assets: path.resolve('./static/assets')
 				}
 			},
 			// server: {
@@ -43,7 +44,8 @@ const config = {
 			plugins: [svg()]
 		},
 		paths: {
-			base
+			base: '',
+			assets: ''
 		}
 	}
 };

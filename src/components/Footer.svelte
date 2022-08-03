@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import wordmark from "$assets/svg/wordmark.svg";
+  import wordmark from "$lib/assets/svg/wordmark.svg";
 
   let localURL;
   let stories = [];

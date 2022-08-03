@@ -1,6 +1,6 @@
 <script>
-  import wordmark from "$assets/svg/wordmark.svg"
-  import sock from "$assets/svg/sock.svg"
+  import wordmark from "$lib/assets/svg/wordmark.svg"
+  import sock from "$lib/assets/svg/sock.svg"
 </script>
 
 <header>

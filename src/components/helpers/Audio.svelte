@@ -1,9 +1,10 @@
 <script>
-    export let filename = "";
+    import file from "$lib/assets/audio/suq_audio.mp3";
 
 	import { tweened } from 'svelte/motion';
 	let volume = tweened(1, { duration: 1000 });
     let setVol = 'Disattiva';
+
 	async function tween(to) {
 		volume.set(to);
 	}
@@ -17,18 +18,19 @@
             setVol = 'Disattiva'
         }
     }
+
 </script>
 
 <audio
 	bind:this={audio}
 	on:volumechange={({ target: { volume: v } }) => v !== $volume && ((audio.volume = $volume), ($volume = v))}
-	src="static/assets/audio/{filename}"
+	src={file}
 	autoplay
     loop
 	type="audio/mp3" />
 
 <div>
-	<button on:click={() => tween($volume < 1 ? 0.75 : 0)} on:click={changeVol}> {setVol} Audio</button>
+	<button on:click={() => tween($volume < 1 ? 1 : 0)} on:click={changeVol}> {setVol} Audio</button>
 </div>
 
 <style>

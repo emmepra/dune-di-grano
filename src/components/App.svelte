@@ -22,7 +22,7 @@
 
 <Section id='parte1' bulma={'p-3'}>
 
-  <!-- <Audio filename='suq_audio.mp3'/> -->
+  <Audio />
 
   <Paragraph capDrop={true} content={doc.parte2_1} />
   <Paragraph content={doc.parte2_2}/>
