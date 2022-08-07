@@ -6,25 +6,6 @@
 
 </script>
 
-<!-- VECCHIA DISPOSIZIONE PER TITOLI MULTIPLI NELLO STESSO PARAGRAFO -->
-<!-- <section class="container grid">
-  <div class="columns">
-    <div class="column content grid-xl">  
-      {#each content as cont, i}
-        {#if cont.title.length !== 0}
-          <h1>{@html cont.title} </h1>
-        {/if}
-
-        {#each cont.pars as p, i}
-          {#if cont.title.length == 0 && i == 0}
-            <p class='cap'>{@html p}</p>
-          {/if}
-          <p>{@html p}</p>
-        {/each}
-      {/each}
-    </div>
-  </div>
-</section> -->
 
 <section class="container p-3 mb-5 grid">
   <div class="columns">
@@ -68,7 +49,7 @@ div.divStart {
 }
 
 p {
-    margin-bottom: rem;
+    margin-bottom: 1rem;
     font-family: var(--serif);
     text-align: left;
     font-size: 1.1rem;
@@ -100,9 +81,9 @@ b {
 }
   p.cap::first-letter {
     color: var(--color-highlight);
-    padding: 0 0.3rem;
+    padding: 0;
     margin: 0 .3rem 0 0;
-    font-size: 3.625rem;
+    font-size: 5rem;
     float: left;
     line-height: 1;
   }

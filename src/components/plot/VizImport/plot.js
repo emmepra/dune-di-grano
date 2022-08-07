@@ -22,20 +22,23 @@ ${styles}
       <hr style = "height: 1px; padding:0; background-color: lightgrey; margin: 20px 20px 20px 5px">
         
       <div id = "waitFor" style = "font-size: 0.9rem; font-family: 'National 2 Web'; opacity:1; align-self: flex-end">
-        <i>Posiziona il cursore su una barra di <b>Import</b> per vedere il dettaglio!</i>
+        <i>Posiziona il cursore su una barra di <b>Export Paese</b> per vedere il dettaglio!</i>
       </div>
 
       <hr style = "height: 1px; padding:0; background-color: lightgrey; margin: 20px 20px 20px 5px">
 
       <br></br>
 
-      <div id = "descWrapper" style = "font-size: 1.1rem; font-family: 'National 2 Web'; opacity:1">
+      <div id = "descWrapper" style = "font-size: 1.1rem; font-family: 'National 2 Web'; opacity:0">
           <span id = "EEZtonnesPct" style = "text-decoration: underline">
              <span id = "EEZtonnes">1200k tonnes </span> 
              <span id = "EUpct">(49%)</span>
           </span>
-          dell'Import di Grano in Medio Oriente proviene da coltivazioni <span class = "Nationality">UK</span>.<br><br>
-          <span id = "descText2">Di questi, il <span id = "catchPct" style = "text-decoration:underline">34%</span> viene importato in <span class = "egy_nation">UK</span> fleets.
+          dell'Import di Grano in Medio Oriente proviene da coltivazioni <span class = "Nationality">UK</span>.
+          <br><br>
+          <span id = "descText2">Di questi, il <span id = "catchPct" style = "text-decoration:underline">34%</span> viene importato in <span class = "egy_nation">UK</span>.
+          <br><br>
+          <span id = "descText3">Il grano Ucraino e Russo, rappresenta circa il <span id = "totPct" style = "text-decoration:underline"><b>94%</b></span> di tutto l'import Egiziano</span>.
       </div>
 
 
@@ -381,7 +384,7 @@ function(EEZ) {
      )
   d3.select("#descText2").transition().delay(1000).duration(1500).style("opacity", 1);
 
-  d3.selectAll('.egy_nation').text('Egizie');
+  d3.selectAll('.egy_nation').text('Egitto');
 }
 )}
 

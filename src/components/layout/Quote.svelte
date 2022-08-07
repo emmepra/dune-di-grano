@@ -36,7 +36,7 @@
         }
         &:after {
             @extend %pseudo-block;
-            margin: 3rem auto 2rem;
+            margin: 4rem auto 2rem;
         }
     }
 
@@ -54,6 +54,7 @@
 
         padding-right: 0.2rem;
         padding-left: 0.1rem;
+
     }
 
     p.description {

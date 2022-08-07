@@ -28,13 +28,11 @@
             <div class="VizPWeath"></div>
         </div>
 
-
-
-
+<span><br><br></span>
 
 <style>
     .svg-container {
         display:flex;
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
 </style>
