@@ -7,6 +7,8 @@
   import Paragraph from "$components/layout/Paragraph.svelte"
   import Map from "$components/layout/Map.svelte"
   import Quote from "$components/layout/Quote.svelte"
+  
+  import Breaking from "$components/layout/Breaking.svelte"
 
   import CoverImg from "$components/layout/CoverImg.svelte"
 
@@ -30,11 +32,11 @@
 
   <Paragraph capDrop={true} content={doc.parte2_1} />
 
-  <Image src={image1} desc={doc.image1.desc} bulma={'m-4'}/>
+  <Image src={image1} desc={doc.image1.desc} place={doc.image1.place} bulma={'m-4'}/>
   
   <Paragraph capDrop={false} content={doc.parte2_2} />
   
-  <Image src={image3} desc={doc.image3.desc} bulma={'m-4'}/>
+  <Image src={image3} desc={doc.image2.desc} place={doc.image2.place} bulma={'m-4'}/>
   
   <Paragraph capDrop={false} content={doc.parte2_3} />
 
@@ -53,7 +55,10 @@
   <Paragraph content={doc.parte3_3}/>
 </Section>
 
-<Section id='parte3' bulma={'p-3'}>
+<Section id='parte4' bulma={'p-3'}>
+
+  <Breaking />
+
   <Paragraph content={doc.parte4_1} div={false}/>
   
   <!-- <CoverImg localUrl={'grano.jpg'}/> -->

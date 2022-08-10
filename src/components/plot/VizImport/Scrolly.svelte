@@ -63,7 +63,7 @@ p {
   }
 
   .step {
-    height: 80vh;
+    height: 50vh;
     display: flex;
     place-items: center;
     justify-content: center;
@@ -89,7 +89,7 @@ p {
 
 	.step.active .step-content {
 		background: white;
-        opacity: 0.75;
+        opacity: 0.85;
 		/* color: black; */
 	}
 	

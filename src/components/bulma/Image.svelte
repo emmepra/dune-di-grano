@@ -1,6 +1,7 @@
 <script>
   export let src = undefined;
   export let desc = '';
+  export let place = '';
   export let bulma = '';
   //   export let id = undefined;
   //   export let style = undefined;
@@ -15,19 +16,23 @@
 </div> -->
 
 <div class="columns is-centered">
-    <div class="column is-one-third {bulma}">
+    <div class="column is-two-fifths {bulma}">
         <div class="card">
           <div class="card-image">
               <figure class="image is-4by3">
                   <img src={src} alt="">
               </figure>
           </div>
-          <div class="card-content">
+          <div class="card-content description">
               <div class="content">
-              <i>{desc}</i>
-              <br>
+                <p class=''>{desc}</p>
+                <p class='has-text-right'>{place}</p>
               </div>
           </div>
         </div>        
     </div>
 </div>
+
+<style>
+
+</style>
