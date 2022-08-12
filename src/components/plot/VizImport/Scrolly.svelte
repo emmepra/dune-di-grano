@@ -12,7 +12,7 @@
 
 <!-- <section class="container"> -->
 
-    <div class="section-container">
+    <div class="section-container mb-7">
         
         <div class="steps-container">
             <Scrolly bind:value>
@@ -43,7 +43,7 @@ p {
     margin-bottom: 1rem;
     font-family: var(--serif);
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.65;
 }
 	
@@ -56,7 +56,7 @@ p {
 
   .section-container {
     margin-top: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     text-align: center;
     transition: background 1000ms;
     display: flex;

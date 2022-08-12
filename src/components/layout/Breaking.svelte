@@ -27,7 +27,7 @@
 </section>
 </Section> -->
 
-<div class="columns is-centered">
+<div class="columns is-centered mb-5">
     <div class="column is-breaking is-two-thirds">
         <h1 id="news" class="title is-1"><breaking><b>BREAKING</b></breaking></h1>
     </div>

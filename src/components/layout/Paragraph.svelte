@@ -62,7 +62,7 @@ b {
 
 @media only screen and (min-width: 30em) {
     p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
 
