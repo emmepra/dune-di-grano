@@ -22,7 +22,7 @@
   .wordmark a:hover {
     background-color: transparent;
   }
-  :global(.wordmark svg path) {
+  /* :global(.wordmark svg path) {
     fill: currentColor;
-  }
+  } */
 </style>

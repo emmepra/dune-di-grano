@@ -20,6 +20,7 @@
   // si potrebbe creare un modulo per l'import di tutti gli asset da dare poi in input alle componenti generiche
   import image1 from "$lib/assets/imgs/image1.png"
   import image3 from "$lib/assets/imgs/image3.png"
+  import tweet from "$lib/assets/imgs/tweet.png"
 </script>
 
 <Map />
@@ -31,47 +32,33 @@
   <Audio />
 
   <Paragraph capDrop={true} content={doc.parte2_1} />
-
-  <Image src={image1} desc={doc.image1.desc} place={doc.image1.place} bulma={'m-4'}/>
-  
+  <Image src={image1} desc={doc.image1.desc} place={doc.image1.place} bulma={'is-two-fifths m-4'} bulma_img={'is-4by3'}/>
   <Paragraph capDrop={false} content={doc.parte2_2} />
-  
-  <Image src={image3} desc={doc.image2.desc} place={doc.image2.place} bulma={'m-4'}/>
-  
+  <Image src={image3} desc={doc.image2.desc} place={doc.image2.place} bulma={'is-two-fifths m-4'} bulma_img={'is-4by3'}/>
   <Paragraph capDrop={false} content={doc.parte2_3} />
-
   <VizImport />
 
 </Section>
 
 <Section id='parte3' bulma={'p-3'}>
-  <Paragraph content={doc.parte3_1} div={false}/>
-  
-  <!-- <CoverImg localUrl={'grano.jpg'}/> -->
-  
+
+  <Paragraph content={doc.parte3_1} div={false}/>  
   <VizPWeath />
-  
   <Paragraph content={doc.parte3_2}/>
   <Paragraph content={doc.parte3_3}/>
+
 </Section>
 
 <Section id='parte4' bulma={'p-3'}>
 
   <Breaking />
-
   <Paragraph content={doc.parte4_1} div={false}/>
+  <Image src={tweet} bulma={'is-one-quarter m-4'} bulma_img={'is-4by5'}/>
+  <Paragraph content={doc.parte4_2} div={false}/>
   
-  <!-- <CoverImg localUrl={'grano.jpg'}/> -->
 </Section>
 
 <CoverImg localUrl={'wheat.png'}/>
 
 <style>
-  hr.divider{
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    border-width: 1px;
-    background-color: var(--color-highlight);;
-  }
 </style>

@@ -1046,7 +1046,6 @@ html`
 
 svg {
     overflow: visible;
-    fill: #34495e;
 }
 
 svg text {

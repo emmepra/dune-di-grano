@@ -3,6 +3,7 @@
   export let desc = '';
   export let place = '';
   export let bulma = '';
+  export let bulma_img = '';
   //   export let id = undefined;
   //   export let style = undefined;
 </script>
@@ -16,10 +17,10 @@
 </div> -->
 
 <div class="columns is-centered">
-    <div class="column is-two-fifths {bulma}">
+    <div class="column {bulma}">
         <div class="card">
           <div class="card-image">
-              <figure class="image is-4by3">
+              <figure class="image {bulma_img}">
                   <img src={src} alt="">
               </figure>
           </div>
@@ -32,12 +33,5 @@
 </div>
 
 <style>
-figcaption {
-  display: block;
-  background-color: black;
-  color: white;
-  font-style: italic;
-  padding: 2px;
-  text-align: center;
-}
+
 </style>

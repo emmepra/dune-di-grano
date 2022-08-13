@@ -7,9 +7,9 @@
 </script>
 
 
-<section class="container p-3 mb-5 grid">
+<section class="container p-3 mb-3 grid">
   <div class="columns">
-    <div class="column content grid-xl" class:divStart={div}>  
+    <div class="column content" class:divStart={div}>  
       {#if title.length !== 0}
         <h4>{@html title} </h4>
       {/if}
@@ -20,6 +20,8 @@
     </div>
   </div>
 </section>
+
+
 
 <style lang="scss">
 

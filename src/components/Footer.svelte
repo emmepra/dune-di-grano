@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import wordmark from "$lib/assets/svg/wordmark.svg";
+  import wordmark from "$lib/assets/svg/24bs.svg";
 
   let localURL;
   let stories = [];
@@ -52,12 +52,11 @@
       {@html wordmark}
     </div>
     <p>
-      <a href="https://pudding.cool">TurningSocks</a>
-      è un progetto digitale con l'obiettivo di raccontare l'attualità visivamente attraverso i dati.
+      Storytelling Digitale nato all'interno del Master in Giornalismo Multimediale, Politico Economico della <a href="https://24orebs.com">24Ore Business School</a>.
     </p>
   </section>
 
-  <section class="links">
+  <!-- <section class="links">
     <ul>
       {#each links as link}
         <li>
@@ -67,7 +66,8 @@
         </li>
       {/each}
     </ul>
-  </section>
+  </section> -->
+
 </footer>
 
 <style>
@@ -75,7 +75,7 @@
     background-color: var(--color-fg);
     color: var(--color-bg);
     font-family: var(--sans);
-    padding: 3em 1em;
+    padding: 0em 3em 1em 3em;
     /* margin-top: 3em; */
   }
 
