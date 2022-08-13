@@ -71,7 +71,7 @@
     background-color: var(--color-fg);
     color: var(--color-bg);
     font-family: var(--sans);
-    padding: 0em 3em 1em 3em;
+    padding: 1em 3em 1em 3em;
     /* margin-top: 3em; */
   }
 

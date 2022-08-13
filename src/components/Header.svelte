@@ -15,6 +15,10 @@
  .level {
   margin-bottom: 0;
  }
+
+ .level-item{
+  display: block;
+ } 
   
   .wordmark {
     max-width: 10em;
