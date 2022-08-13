@@ -1,15 +1,21 @@
 <script>
-  import wordmark from "$lib/assets/svg/wordmark.svg"
+  import wordmark from "$lib/assets/svg/24bs_head.svg"
   import sock from "$lib/assets/svg/sock.svg"
+  import cross from "$lib/assets/svg/cross.svg"
 </script>
 
-<header>
-  <div class="wordmark">
-    <a href="https://emmepra.it">{@html wordmark}</a>
+<nav class="level">  
+  <div class="wordmark level-item has-text-centered">
+    <a href="http://24orebs.com">{@html wordmark}</a>
   </div>
-</header>
+</nav>
 
 <style>
+
+ .level {
+  margin-bottom: 0;
+ }
+  
   .wordmark {
     max-width: 10em;
     margin: 0 auto;
