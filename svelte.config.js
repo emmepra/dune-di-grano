@@ -14,6 +14,10 @@ const config = {
 		}),
 		prerender: {
 			entries: ['*']
+		},
+		paths: {
+			base: '',
+			assets: ''
 		}
 	}
 };

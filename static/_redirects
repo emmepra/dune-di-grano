@@ -1,1 +1,14 @@
+# Handle SPA routing - all routes should serve index.html
 /*    /index.html   200
+
+# Handle asset paths explicitly
+/_app/*    /_app/:splat   200
+/src/*     /src/:splat    200
+/static/*  /static/:splat 200
+
+# Handle API calls that might be expected
+/api/*     /index.html    200
+
+# Fallback for any unmatched routes
+/defaultsite  /index.html  200
+/*            /index.html  200
