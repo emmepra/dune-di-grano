@@ -7,6 +7,7 @@ export default defineConfig({
 	plugins: [sveltekit(), svg()],
 	resolve: {
 		alias: {
+			$lib: path.resolve('./src/lib'),
 			$utils: path.resolve('./src/utils'),
 			$components: path.resolve('./src/components'),
 			$styles: path.resolve('./src/styles'),
