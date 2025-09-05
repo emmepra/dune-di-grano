@@ -31,6 +31,10 @@
 		"vite-plugin-svgstring": "^1.0.0"
 	},
 	"type": "module",
+	"engines": {
+		"node": ">=18.18.0",
+		"npm": ">=8.0.0"
+	},
 	"dependencies": {
 		"@observablehq/runtime": "^5.9.0",
 		"@sveltejs/adapter-static": "^3.0.0",
